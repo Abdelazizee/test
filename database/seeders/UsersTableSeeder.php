@@ -25,6 +25,7 @@ class UsersTableSeeder extends Seeder
                 'lat'                        => '',
                 'lang'                       => '',
                 'company_phone'              => '',
+                'verify_code'                => '',
             ],
         ];
 

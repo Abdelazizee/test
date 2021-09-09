@@ -27,6 +27,11 @@ class CreateUsersTable extends Migration
             $table->string('lat')->nullable();
             $table->string('lang')->nullable();
             $table->string('company_phone')->nullable();
+            $table->boolean('step_1')->default(0)->nullable();
+            $table->boolean('step_2')->default(0)->nullable();
+            $table->boolean('step_3')->default(0)->nullable();
+            $table->boolean('step_4')->default(0)->nullable();
+            $table->string('verify_code')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

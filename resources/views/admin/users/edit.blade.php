@@ -213,6 +213,28 @@
                 <span class="help-block">{{ trans('cruds.user.fields.company_phone_helper') }}</span>
             </div>
             <div class="form-group">
+                <div class="form-check {{ $errors->has('step_3') ? 'is-invalid' : '' }}">
+                    <input type="hidden" name="step_3" value="0">
+                    <input class="form-check-input" type="checkbox" name="step_3" id="step_3" value="1" {{ $user->step_3 || old('step_3', 0) === 1 ? 'checked' : '' }}>
+                    <label class="form-check-label" for="step_3">{{ trans('cruds.user.fields.step_3') }}</label>
+                </div>
+                @if($errors->has('step_3'))
+                    <span class="text-danger">{{ $errors->first('step_3') }}</span>
+                @endif
+                <span class="help-block">{{ trans('cruds.user.fields.step_3_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <div class="form-check {{ $errors->has('step_4') ? 'is-invalid' : '' }}">
+                    <input type="hidden" name="step_4" value="0">
+                    <input class="form-check-input" type="checkbox" name="step_4" id="step_4" value="1" {{ $user->step_4 || old('step_4', 0) === 1 ? 'checked' : '' }}>
+                    <label class="form-check-label" for="step_4">{{ trans('cruds.user.fields.step_4') }}</label>
+                </div>
+                @if($errors->has('step_4'))
+                    <span class="text-danger">{{ $errors->first('step_4') }}</span>
+                @endif
+                <span class="help-block">{{ trans('cruds.user.fields.step_4_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>

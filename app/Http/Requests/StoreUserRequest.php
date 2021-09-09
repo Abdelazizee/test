@@ -79,6 +79,11 @@ class StoreUserRequest extends FormRequest
                 'max:50',
                 'nullable',
             ],
+            'verify_code' => [
+                'string',
+                'max:50',
+                'nullable',
+            ],
         ];
     }
 }
