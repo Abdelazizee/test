@@ -48,6 +48,12 @@
                             {{ trans('cruds.user.fields.phone') }}
                         </th>
                         <th>
+                            {{ trans('cruds.user.fields.step_3') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.user.fields.step_4') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -77,6 +83,10 @@
                         </td>
                         <td>
                             <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                        </td>
+                        <td>
+                        </td>
+                        <td>
                         </td>
                         <td>
                         </td>
@@ -112,6 +122,14 @@
                             </td>
                             <td>
                                 {{ $user->phone ?? '' }}
+                            </td>
+                            <td>
+                                <span style="display:none">{{ $user->step_3 ?? '' }}</span>
+                                <input type="checkbox" disabled="disabled" {{ $user->step_3 ? 'checked' : '' }}>
+                            </td>
+                            <td>
+                                <span style="display:none">{{ $user->step_4 ?? '' }}</span>
+                                <input type="checkbox" disabled="disabled" {{ $user->step_4 ? 'checked' : '' }}>
                             </td>
                             <td>
                                 @can('user_show')

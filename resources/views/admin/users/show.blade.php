@@ -217,6 +217,46 @@
                             {{ $user->company_phone }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.user.fields.step_1') }}
+                        </th>
+                        <td>
+                            <input type="checkbox" disabled="disabled" {{ $user->step_1 ? 'checked' : '' }}>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.user.fields.step_2') }}
+                        </th>
+                        <td>
+                            <input type="checkbox" disabled="disabled" {{ $user->step_2 ? 'checked' : '' }}>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.user.fields.step_3') }}
+                        </th>
+                        <td>
+                            <input type="checkbox" disabled="disabled" {{ $user->step_3 ? 'checked' : '' }}>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.user.fields.step_4') }}
+                        </th>
+                        <td>
+                            <input type="checkbox" disabled="disabled" {{ $user->step_4 ? 'checked' : '' }}>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.user.fields.verify_code') }}
+                        </th>
+                        <td>
+                            {{ $user->verify_code }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">
